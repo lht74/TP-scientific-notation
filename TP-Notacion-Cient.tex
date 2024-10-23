@@ -1,89 +1,113 @@
-\documentclass{article}
+\documentclass[12pt]{exam}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{multicol}
+\usepackage[left=10mm, right= 20mm, bottom= 20mm, top= 35mm, headsep=10mm, headheight=0mm]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\renewcommand\partlabel{\thepartno)}
 
-\title{Trabajo Práctico Nº 2 - Opción Simplificada}
-\author{Profesor: Lucas Trejo}
-\date{}
+%%% DEFINICIONES PARA MODIFICAR APARIENCIA DEL ENCABEZADO%%%
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@fullhead}{\hrule}{\hrule\vskip2pt\hrule height 2pt}{}{}
+\patchcmd{\run@fullhead}{\hrule}{\hrule\vskip2pt\hrule height 2pt}{}{}
+\makeatother
+\pagestyle{headandfoot}
+\firstpageheadrule
+\firstpageheader {\escuela \\ Curso: \curso}
+                 {MATEMÁTICA \\ \tpnombre}
+                  {\lugar \\ \today}  
+\firstpagefooter{Prof: \textit{Lucas H. Trejo}}{}{\thepage}
+\runningfooter{Prof: \textit{Lucas H. Trejo}}{}{Pag. \thepage\ of \numpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                       %%% REEMPLAZAR LOS PARÁMETROS AQUÍ    %%  
+\newcommand{\escuela}{EES Nº 32}                                             %%             
+\newcommand{\curso}{  6ºE}                                                  %%             
+\newcommand{\tpnombre}{Trabajo Práctico N° 2}                     %%
+\newcommand{\lugar}{La Plata}                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-\maketitle
+\begin{questions}
 
-\section*{Actividades}
-
-\begin{enumerate}
-    \item Ver con atención los siguientes videos:
-    \begin{enumerate}
-        \item \url{https://youtu.be/qjX4wKUoK7E}
-        \item \url{https://youtu.be/uPbE524NcWM}
-    \end{enumerate}
-    (En el primer video se desarrolla una explicación más detallada, el segundo solo muestra algunos ejemplos resueltos)
-
-    \item Escribir cada uno de los siguientes números en notación científica:
-    \begin{itemize}
-        \item[a)] 12 000 000 = 
-        \item[b)] 44 000 000 = 
-        \item[c)] 7 000 000 000 = 
-        \item[d)] 1 500 000 000 000 = 
-        \item[e)] 200 = 
-        \item[f)] 5 = 
-    \end{itemize}
-
-    \item Escribir como número decimal y en notación científica:
-    \begin{itemize}
-        \item[a)] Doce millones 
-        \item[b)] Un billón 
-        \item[c)] Cuatrocientos millones 
-        \item[d)] Siete mil cuatrocientos millones
-        \item[e)] Dos mil millones 
-        \item[f)] Un trillón 
-    \end{itemize}
-
-    \item Expresar en notación científica:
-    \begin{itemize}
-        \item[a)] 0,05 = 
-        \item[b)] 0,0018 = 
-        \item[c)] 0,000085 = 
-        \item[d)] 0,000000186 = 
-        \item[e)] 0,000000000024 = 
-        \item[f)] 0,000000000000001 = 
-    \end{itemize}
-
-    \item Indicar cuáles de estos números no están escritos en notación científica, justificando el motivo:
-    \begin{itemize}
-        \item[a)] $9,81 \cdot 10^{-4}$
-        \item[b)] $35 \cdot 10^8$
-        \item[c)] $1,5 \cdot 10^{2,5}$
-        \item[d)] $0,981 \cdot 10^{14}$
-        \item[e)] $1,6 \cdot 34$
-        \item[f)] $5 \cdot 10^0$
-        \item[g)] $3,5 \cdot 10^{\sqrt{3}}$
-        \item[h)] $9,99 \cdot 10^{-23}$
-    \end{itemize}
-
-    \item Investigar y responder las siguientes preguntas, expresando los resultados en notación convencional y científica (redondear a 3 cifras significativas):
-    \begin{itemize}
-        \item[a)] ¿Cuál es la distancia mínima, en kilómetros, entre el Sol y la Luna?
-        \item[b)] ¿Cuál es la distancia mínima, en kilómetros, entre la Tierra y el Sol?
-        \item[c)] ¿Cuántos metros recorre la luz en un segundo?
-        \item[d)] ¿Cuántos kilómetros recorre la luz en un año?
-        \item[e)] ¿Cuántos kilómetros tiene la circunferencia de la Tierra?
-        \item[f)] ¿Cuántas estrellas se estima que hay en nuestra galaxia, la Vía Láctea?
-        \item[g)] ¿Cuántas neuronas tiene el cerebro humano?
-        \item[h)] ¿Cuál es la población mundial en la actualidad?
-        \item[i)] ¿Hace cuántos años se calcula que se formó nuestro planeta, la Tierra?
-        \item[j)] ¿Hace cuántos años se extinguieron los dinosaurios?
-        \item[k)] ¿Cuántas bacterias calculan los científicos que viven dentro de nuestro cuerpo?
-        \item[l)] ¿Cuál es el diámetro aproximado de una bacteria (en metros)?
-        \item[m)] ¿Cuál es el tamaño del virus más grande que se conoce (en metros)?
-        \item[n)] ¿Cuál es el monto total, en dólares, de la deuda externa argentina?
-        \item[o)] ¿Cuánto dinero se invierte en presupuesto militar cada año en EEUU?
-        \item[p)] ¿Cuál es el total del gasto militar a nivel mundial?
-    \end{itemize}
-
-    \item Escribir al menos tres preguntas cuya respuesta sea un número muy grande.
+    \question Ver con atención los siguientes videos:
+     
+         \url{https://youtu.be/qjX4wKUoK7E} \\
+         \url{https://youtu.be/uPbE524NcWM}
     
-    \item Escribir al menos tres preguntas cuya respuesta sea un número muy pequeño.
-\end{enumerate}
+    (En el primer video se desarrolla una explicación más detallada, el segundo solo muestra algunos ejemplos resueltos).
+
+    \question Escribir cada uno de los siguientes números en notación científica:
+    \begin{parts}
+        \part 12 000 000 = 
+        \part 44 000 000 = 
+        \part 7 000 000 000 = 
+        \part 1 500 000 000 000 = 
+        \part 200 = 
+        \part 5 = 
+    \end{parts}
+
+    \question Escribir como número decimal y en notación científica:
+    \begin{parts}
+        \part Doce millones
+        \part Un billón
+        \part Cuatrocientos millones
+        \part Siete mil cuatrocientos millones
+        \part Dos mil millones
+        \part Un trillón
+    \end{parts}
+
+    \question Expresar en notación científica:
+    \begin{parts}
+        \part 0,05 = 
+        \part 0,0018 = 
+        \part 0,000085 = 
+        \part 0,000000186 = 
+        \part 0,000000000024 = 
+        \part 0,000000000000001 = 
+    \end{parts}
+
+    \question Indicar cuáles de estos números no están escritos en notación científica, justificando el motivo:
+    \begin{parts}
+        \part $9,81 \cdot 10^{-4}$
+        \part $35 \cdot 10^8$
+        \part $1,5 \cdot 10^{2,5}$
+        \part $0,981 \cdot 10^{14}$
+        \part $1,6 \cdot 34$
+        \part $5 \cdot 10^0$
+        \part $3,5 \cdot 10^{\sqrt{3}}$
+        \part $9,99 \cdot 10^{-23}$
+    \end{parts}
+
+    \question Investigar y responder las siguientes preguntas, expresando los resultados en notación convencional y científica (redondear a 3 cifras significativas):
+    \begin{parts}
+        \part ¿Cuál es la distancia mínima, en kilómetros, entre el Sol y la Luna?
+        \part ¿Cuál es la distancia mínima, en kilómetros, entre la Tierra y el Sol?
+        \part ¿Cuántos metros recorre la luz en un segundo?
+        \part ¿Cuántos kilómetros recorre la luz en un año?
+        \part ¿Cuántos kilómetros tiene la circunferencia de la Tierra?
+        \part ¿Cuántas estrellas se estima que hay en nuestra galaxia, la Vía Láctea?
+        \part ¿Cuántas neuronas tiene el cerebro humano?
+        \part ¿Cuál es la población mundial en la actualidad?
+        \part ¿Hace cuántos años se calcula que se formó nuestro planeta, la Tierra?
+        \part ¿Hace cuántos años se extinguieron los dinosaurios?
+        \part ¿Cuántas bacterias calculan los científicos que viven dentro de nuestro cuerpo?
+        \part ¿Cuál es el diámetro aproximado de una bacteria (en metros)?
+        \part ¿Cuál es el tamaño del virus más grande que se conoce (en metros)?
+        \part ¿Cuál es el monto total, en dólares, de la deuda externa argentina?
+        \part ¿Cuánto dinero se invierte en presupuesto militar cada año en EEUU?
+        \part ¿Cuál es el total del gasto militar a nivel mundial?
+    \end{parts}
+
+    \question Escribe al menos tres preguntas cuya respuesta sea un número muy grande.
+
+    \question Escribe al menos tres preguntas cuya respuesta sea un número muy pequeño.
+
+\end{questions}
 
 \end{document}
